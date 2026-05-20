@@ -25,7 +25,13 @@ impl Pieces {
     pub const KING: usize = 5;
 }
 
-
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Clone, Copy)]
+pub struct State{
+    casteling_rights: CastelingRights,
+    enpassant_rights: Option<Square>,
+    half_move_counter: u8,
+    stm: usize,
+}
 
 
 fn main() {
